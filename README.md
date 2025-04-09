@@ -12,7 +12,7 @@ This is a modern, responsive portfolio website built using **V0.dev**, **React**
 - 📱 Fully responsive layout (mobile & desktop)
 - 💡 Reusable components: `HeroSection`, `Projects`, `ProjectCard`, `ContactForm`
 - 📂 Modal functionality for viewing project details
-- 🎨 Brand theming using `#3A5199` as the primary color
+- 🎨 Brand theming using `#3A5199`, `#101314`, and `#FFFFFA` as the primary colors
 
 ---
 
@@ -24,4 +24,4 @@ This is a modern, responsive portfolio website built using **V0.dev**, **React**
 - [Lucide Icons](https://lucide.dev/)
 - [V0.dev](https://v0.dev) for AI-generated component scaffolding
 
-### Deployed on [Vercel](https://v0-tailwind-portfolio-design-alpha.vercel.app/)
+### [![Deploy on Vercel](https://vercel.com/button)](https://v0-tailwind-portfolio-design-alpha.vercel.app/)
