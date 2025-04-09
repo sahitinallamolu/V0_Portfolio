@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import { ArrowUpRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import FadeIn from "@/components/fade-in"
 import StaggerChildren from "@/components/stagger-children"
 import ProjectModal from "./project-modal"
@@ -73,11 +75,9 @@ export default function Projects() {
 
           <StaggerChildren staggerDelay={150} className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
-              <div
+              <Card
                 key={project.id}
                 className="project-card cursor-pointer bg-[#101314] text-[#FFFFFA] shadow-md hover:shadow-lg transition-all"
-                onClick={() => setSelectedProject(project.id)}
-                data-cursor-hover
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -88,24 +88,30 @@ export default function Projects() {
                     className="project-image w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-light mb-2 title-font">{project.title}</h3>
-                  <p className="text-sm opacity-70 mb-4">{project.description}</p>
-                  <div className="flex items-center text-sm font-light title-font">
-                    VIEW PROJECT <ArrowUpRight className="ml-2 h-4 w-4" />
-                  </div>
-                </div>
-              </div>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-xl font-light title-font">{project.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="pb-4">
+                  <p className="text-sm opacity-70 mb-2">{project.description}</p>
+                  <p className="text-xs opacity-60">{project.date}</p>
+                </CardContent>
+                <CardFooter>
+                  <Button
+                    onClick={() => setSelectedProject(project.id)}
+                    variant="outline"
+                    className="text-[#FFFFFA] border-[#FFFFFA]/50 hover:bg-[#FFFFFA]/10 hover:border-[#FFFFFA] p-2 h-auto font-light title-font text-sm flex items-center gap-2 transition-all duration-300 hover:scale-105 transform"
+                    data-cursor-hover
+                  >
+                    VIEW PROJECT <ArrowUpRight className="h-4 w-4" />
+                  </Button>
+                </CardFooter>
+              </Card>
             ))}
           </StaggerChildren>
         </div>
       </section>
 
-      <ProjectModal
-        projects={projects}
-        selectedProject={selectedProject}
-        setSelectedProject={setSelectedProject}
-      />
+      <ProjectModal projects={projects} selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
     </>
   )
 }
