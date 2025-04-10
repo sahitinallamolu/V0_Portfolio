@@ -23,7 +23,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             <div className="flex flex-wrap justify-center gap-6">
               <Button
                 onClick={() => scrollToSection("projects")}
-                className="bg-[#101314] text-[#FFFFFA] hover:bg-[#101314]/90 rounded-none px-8 py-6"
+                className="bg-[#101314] text-[#FFFFFA] hover:bg-[#101314]/90 rounded-full px-8 py-6 transition-all duration-300 hover:scale-105 transform hover:shadow-[0_0_15px_rgba(255,255,250,0.3)]"
                 data-cursor-hover
               >
                 VIEW PROJECTS <ArrowUpRight className="ml-2 h-4 w-4" />
@@ -31,7 +31,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
               <Button
                 asChild
                 variant="outline"
-                className="border-[#FFFFFA] text-[#FFFFFA] hover:bg-[#FFFFFA]/5 rounded-none px-8 py-6"
+                className="border-[#101314] text-[#101314] hover:bg-[#101314] hover:text-[#FFFFFA] rounded-full px-8 py-6 transition-all duration-300 hover:scale-105 transform hover:shadow-[0_0_15px_rgba(16,19,20,0.3)]"
                 data-cursor-hover
               >
                 <a

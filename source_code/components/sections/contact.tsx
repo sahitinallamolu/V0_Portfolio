@@ -73,7 +73,7 @@ export default function Contact() {
               <div className="space-y-4 mb-8">
                 <a
                   href="mailto:nallamolu.s@northeastern.edu"
-                  className="flex items-center gap-3 hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-3 hover:opacity-70 transition-opacity rounded-full bg-[#36454F]/30 p-3 hover:bg-[#36454F]/50 transition-all duration-300 hover:scale-105 transform hover:shadow-[0_0_15px_rgba(255,255,250,0.1)]"
                   data-cursor-hover
                 >
                   <Mail size={20} />
@@ -83,7 +83,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/sahitinallamolu/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 hover:opacity-70 transition-opacity"
+                  className="flex items-center gap-3 hover:opacity-70 transition-opacity rounded-full bg-[#36454F]/30 p-3 hover:bg-[#36454F]/50 transition-all duration-300 hover:scale-105 transform hover:shadow-[0_0_15px_rgba(255,255,250,0.1)]"
                   data-cursor-hover
                 >
                   <Linkedin size={20} />
@@ -132,7 +132,7 @@ export default function Contact() {
               </div>
               <Button
                 type="submit"
-                className="bg-[#FAF7F0] text-[#4A4947] hover:bg-[#FAF7F0]/90 rounded-none px-8 py-6 w-full md:w-auto"
+                className="bg-[#101314] text-[#FFFFFA] hover:bg-[#101314]/90 rounded-full px-8 py-6 transition-all duration-300 hover:scale-105 transform hover:shadow-[0_0_15px_rgba(255,255,250,0.3)]"
                 disabled={isSubmitting}
                 data-cursor-hover
               >

@@ -22,7 +22,7 @@ interface ProjectModalProps {
 export default function ProjectModal({ projects, selectedProject, setSelectedProject }: ProjectModalProps) {
   return (
     <div className={`modal-overlay ${selectedProject !== null ? "open" : ""}`} onClick={() => setSelectedProject(null)}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()} data-cursor-hover>
+      <div className="modal-content rounded-xl" onClick={(e) => e.stopPropagation()} data-cursor-hover>
         {selectedProject !== null &&
           projects
             .filter((p) => p.id === selectedProject)
@@ -32,7 +32,7 @@ export default function ProjectModal({ projects, selectedProject, setSelectedPro
                   <h3 className="text-2xl md:text-3xl font-light title-font">{project.title}</h3>
                   <button
                     onClick={() => setSelectedProject(null)}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors rounded-full p-2 hover:bg-[#FFFFFA]/10 transition-all duration-300"
                     aria-label="Close modal"
                     data-cursor-hover
                   >
@@ -42,7 +42,7 @@ export default function ProjectModal({ projects, selectedProject, setSelectedPro
 
                 <div className="mb-6">
                   <p className="text-sm text-muted-foreground mb-4">{project.date}</p>
-                  <div className="aspect-[16/9] overflow-hidden mb-6">
+                  <div className="aspect-[16/9] overflow-hidden mb-6 rounded-lg">
                     <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
@@ -64,7 +64,7 @@ export default function ProjectModal({ projects, selectedProject, setSelectedPro
                 <div className="pt-4 border-t">
                   <Button
                     onClick={() => setSelectedProject(null)}
-                    className="bg-[#101314] text-[#FFFFFA] hover:bg-[#101314]/90 rounded-none px-8 py-6 title-font"
+                    className="bg-[#101314] text-[#FFFFFA] hover:bg-[#101314]/90 rounded-full px-8 py-6 title-font transition-all duration-300 hover:scale-105 transform hover:shadow-[0_0_15px_rgba(255,255,250,0.3)]"
                     data-cursor-hover
                   >
                     CLOSE

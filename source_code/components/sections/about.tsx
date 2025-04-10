@@ -28,15 +28,15 @@ export default function About() {
           </FadeIn>
 
           <FadeIn delay={400}>
-            <div className="bg-[#101314] p-8 text-[#FFFFFA]">
+            <div className="bg-[#101314] p-8 text-[#FFFFFA] rounded-xl shadow-md transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,250,0.2)] hover:scale-105 transform">
               <h3 className="text-xl font-light mb-6 title-font">EDUCATION</h3>
               <StaggerChildren staggerDelay={150}>
-                <div className="mb-6">
+                <div className="mb-6 p-4 bg-[#36454F]/30 rounded-lg transition-all duration-300 hover:bg-[#36454F]/50 hover:scale-105 transform">
                   <h4 className="font-light title-font">Northeastern University</h4>
                   <p className="text-sm opacity-70">MS in Information Systems</p>
                   <p className="text-sm">2023 - Present</p>
                 </div>
-                <div>
+                <div className="p-4 bg-[#36454F]/30 rounded-lg transition-all duration-300 hover:bg-[#36454F]/50 hover:scale-105 transform">
                   <h4 className="font-light title-font">SRM Institute of Science and Technology</h4>
                   <p className="text-sm opacity-70">B.Tech in Computer Science</p>
                   <p className="text-sm">2017 - 2021</p>

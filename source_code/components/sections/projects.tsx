@@ -77,7 +77,7 @@ export default function Projects() {
             {projects.map((project) => (
               <Card
                 key={project.id}
-                className="project-card cursor-pointer bg-[#101314] text-[#FFFFFA] shadow-md hover:shadow-lg transition-all"
+                className="project-card cursor-pointer bg-[#101314] text-[#FFFFFA] shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 transform rounded-xl overflow-hidden"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -98,11 +98,10 @@ export default function Projects() {
                 <CardFooter>
                   <Button
                     onClick={() => setSelectedProject(project.id)}
-                    variant="outline"
-                    className="text-[#FFFFFA] border-[#FFFFFA]/50 hover:bg-[#FFFFFA]/10 hover:border-[#FFFFFA] p-2 h-auto font-light title-font text-sm flex items-center gap-2 transition-all duration-300 hover:scale-105 transform"
+                    className="bg-[#101314] text-[#FFFFFA] hover:bg-[#101314]/90 rounded-full px-6 py-2 font-light title-font text-sm flex items-center gap-2 transition-all duration-300 hover:scale-105 transform hover:shadow-[0_0_15px_rgba(255,255,250,0.3)]"
                     data-cursor-hover
                   >
-                    VIEW PROJECT <ArrowUpRight className="h-4 w-4" />
+                    VIEW PROJECT <ArrowUpRight className="h-4 w-4 ml-1" />
                   </Button>
                 </CardFooter>
               </Card>
